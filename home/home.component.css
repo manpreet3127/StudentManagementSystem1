@@ -1,0 +1,11 @@
+.nav-wrapper{
+    padding-left: 10px;
+}
+.container{
+    background-color: aliceblue;
+    padding-top: 10px;
+    
+}
+.clear{
+    clear: both;
+}

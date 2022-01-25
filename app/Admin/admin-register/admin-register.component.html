@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="card">
+        <h4 class="card-header">Register</h4>
+        <div class="card-body">
+        <form [formGroup]="form" (ngSubmit)="onregister(form.value)">
+            <div class="form-group">
+           <label for="userName">UserName</label>
+           <input type="text" formControlName="UserName" class="form-control"[ngClass]="{'is-invalid':submitted && f.UserName.errors}"/>
+           <div *ngIf="submitted && f.UserName.errors" class="invalid-feedback">
+              <div *ngIf="f.UserName.errors.required">UserName is required</div>
+           </div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" formControlName="Password" class="form-control">
+            <div *ngIf="submitted && f.Password.errors" class="invalid-feedback" [ngClass]="{'is-invalid':submitted && f.Password.errors}">
+               <div *ngIf="f.Password.errors.required">Password is required</div>
+               <div *ngIf="f.Password.errors.minlength">Password must be at least 6 characters</div>
+            </div>
+         </div><br><br>
+         <div class="form-group">
+            <button [disabled]="loading" class="btn btn-primary">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Register
+           
+           </button> &nbsp;&nbsp;&nbsp;
+            <a routerLink="/Login" class="btn btn-primary">Cancel</a>&nbsp;&nbsp;&nbsp;
+            <a routerLink="/show-data" class="btn btn-primary">Show Data</a>
+        </div>
+</form>
+        </div>

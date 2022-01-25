@@ -1,0 +1,31 @@
+<div class="container">
+<table border="1">
+    
+    <tr >
+        
+        <td>UserName</td>
+        <td>FirstName</td>
+        <td>LastName</td>
+        <td>Class</td>
+        <td>Email</td>
+        <td>Password</td>
+    </tr>
+    
+    
+     <tr *ngFor="let item of data " >
+        <td>{{item.UserName}}</td>
+        <td>{{item.FirstName}}</td>
+        <td>{{item.LastName}}</td>
+        <td>{{item.Class}}</td>
+        <td>{{item.Email}}</td>
+        <td>{{item.Password}}</td>
+         <td><button (click)="deleteItem(item)">Delete</button></td>
+        <td><button (click)="editData(item.id)">Edit</button></td>
+        <td><button (click)="userdata(item.id)">Student Data</button></td>
+    </tr>
+    
+</table>
+</div>
+    <!-- <td><button (click)="deleteItem(item)">Delete</button></td>
+    <td><button (click)="editData(item.id)">Edit</button></td>-->
+    

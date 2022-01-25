@@ -1,0 +1,24 @@
+<div class="container">
+    
+<!--<h1>Hi {{currentUser.FirstName}}</h1>-->
+<div *ngIf="users" class="main-div">
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title">
+               <h3>Welcome  {{users.FirstName}}</h3> <br>
+                UserName:  {{users.UserName}}<br>
+                Name:    {{users.FirstName}}
+                {{users.LastName}}<br>
+                Class:   {{users.Class}}<br><br><br>
+                
+            </div>
+        </div>
+        <button class="btn btn-primary"(click)="feesDetails()">Finance</button>&nbsp;&nbsp;
+        <button class="btn btn-primary"(click)="grades()">Grades</button>
+        <p><a [routerLink]="['/home']">Logout</a></p>
+    </div>
+</div>
+</div>
+
+
+
